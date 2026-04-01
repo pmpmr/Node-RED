@@ -114,6 +114,10 @@ RUN npm install --unsafe-perm --no-update-notifier --no-fund --only=production \
 ENV NODE_RED_ENABLE_SAFE_MODE=false \
     NODE_RED_ENABLE_PROJECTS=true
 
+
+WORKDIR /app
+COPY settings.js /app/settings.js
+
 # Expose Node-RED port
 EXPOSE 1880
 
